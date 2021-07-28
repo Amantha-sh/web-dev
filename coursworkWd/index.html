@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumos</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- navigation bar -->
+
+    <div id="Home" class="banner">
+        <div>
+            <header class="navbar">
+                <img src="sitelogo.png" style="width: 30px; height: 30px;" class="logo" alt="">
+                <ul>
+                    <li><a href="#Home">HOME</a></li>
+                    <li><a href="#">OUR TEAM</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#myform">CONTACT US</a></li>
+                    <li><a href="new.html">LOG IN</a></li>
+                </ul>
+            </header>
+            <!-- navigation bar sticky effect -->
+            <section class="floating"></section>
+            <script type="text/javascript">
+                window.addEventListener("scroll", function () {
+                    var header = document.querySelector("header");
+                    header.classList.toggle("sticky", window.scrollY > 0);
+                })
+            </script>
+        </div>
+
+        <!-- main content of the Main page -->
+        <div class="content">
+            <h1>LUMOS</h1>
+            <P>In a sea of carbon-copy producers, LUMOS have cultivated their signature sound by creating forward-thinking,electronic music, and live music that is influenced by old school funk, soul , classic, jass R&B and hip-hop. Together they combine their powers as a Band, resulting in a brilliant technical display of creative collaboration.</P>
+            <div>
+                <!-- buttons -->
+                <button type="button" onclick="location.href = 'https:'"> SHOP</button>
+                <button type="button" onclick="location.href = 'https:'"> START QUIZ</button>
+                <button type="button" onclick="location.href = '#myform'"> CONTACT US</button>
+            </div>
+            <div>
+
+            
+            </div>
+            <br><br>
+        </div>
+
+    </div>
+
+
+    <!-- social media buttons -->
+    <div class="head">
+        <fieldset>
+            <br><br>
+            <h1 style="color: #361a07; font-size: 50px; text-align: center;">Check out our social media</h1>
+            <br><br>
+            <link rel="stylesheet" href="style.css">
+            <br><br><br>
+            <script src="http://kit.fontawesome.com/a076d05399.js"></script>
+            <div class="wrapper">
+                <div class="icon facebook">
+                    <div class="tooltip">Facebook</div>
+                    <span><i class="fab fa-facebook-f" onclick="location.href = 'https://www.facebook.com/'"></i></span>
+                </div>
+                <div class="icon twitter">
+                    <div class="tooltip">Twitter</div>
+                    <span><i class="fab fa-twitter" onclick="location.href = 'https://twitter.com/?lang=en'"></i></span>
+                </div>
+                <div class="icon instagram" onclick="location.href = 'https://www.instagram.com/?hl=en'">
+                    <div class="tooltip">Instagram</div>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+                <div class="icon github" onclick="location.href = 'https://github.com/'">
+                    <div class="tooltip">Github</div>
+                    <span><i class="fab fa-github"></i></span>
+                </div>
+                <div class="icon youtube" onclick="location.href = 'https://www.youtube.com/'">
+                    <div class="tooltip">Youtube</div>
+                    <span><i class="fab fa-youtube"></i></span>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+        </fieldset>
+    </div>
+
+
+
+
+    <!-- quary form -->
+    <div class="contact-area">
+        <div>
+
+            <a href=""></a>
+            <div class="modal-container" id="modal-container">
+                <div>
+                    <h2>Sumary</h2>
+                    <br>
+                    <div id="showName"></div>
+                    <br>
+                    <div id="showEmail"></div>
+                    <br>
+                    <div id="showSection"></div>
+                    <br>
+                    <div id="showMessage"></div>
+                    <br>
+                    <button id="closeModal">Edit</button>
+                    <button id="sentModal" href="index.html" onclick="clearText()">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-us" >
+            <h2>Contact Us</h2>
+            <div id="error_message"></div>
+            <form id="myform" action="https://formspree.io/f/xrgrajqa" onsubmit="return validation()" method="POST">
+                <div class="input_field">
+                    <input type="text" placeholder="Name" id="name">
+                </div>
+                <div class="input_field">
+                    <input type="email" placeholder="Email" id="email">
+                </div>
+                <div class="input_field">
+                    <input type="radio" id="html" name="fav_language" value="Products" checked >
+                    <label for="html">Products</label><br>
+                    <input type="radio" id="css" name="fav_language" value="Studio">
+                    <label for="css">Studio</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="Booking">
+                    <label for="javascript">Booking</label>
+                </div>
+                <div class="input_field">
+
+                    <textarea name="message" id="message" cols="30" rows="10"
+                        placeholder="Enter your Message"></textarea>
+                    <button id="openModal" onclick="showSummary()">Show</button>
+                    
+
+
+                </div>
+            </form>
+        </div>
+        <!-- <div class="address">
+            <p><h2>Lumos</h2></p>
+            <p>23, Rajagiriya road</p>
+            <p>Rajagiriya</p>
+            <p>Sri Lanka</p>
+            <p>+94 71 339 0043</p>
+        </div> -->
+    </div>
+
+<div>
+</div>
+    <script src="Script.js"></script>
+<button class="editor" style="left: 48%; top: 500px; width: 60px;" onclick="location.href = 'https://docs.google.com/document/d/18fRMUuAra3IfZ3A1YNHK5CVyox7lPkLxhYKSAdGsQrQ/edit?usp=sharing'" >Editor's Page</button>
+</body>
+</html>

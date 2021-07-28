@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar  -->
+    <div  id="Home" class="banner">
+        <div>
+            <header class="navbar">
+            <img src="" class="logo" alt="">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">OUR TEAM</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="">CONTACT US</a></li>
+                <li><a href="">LOG IN</a></li>
+            </ul> 
+        </header> 
+         <!-- navigation bar sticky effect -->
+            <section class="floating"></section>
+            <script type="text/javascript">
+                window.addEventListener("scroll",function(){
+                    var header = document.querySelector("header");
+                    header.classList.toggle("sticky", window.scrollY>0);
+                })
+            </script>
+        </div>
+        <div class="login">
+            <div class="login-form">
+               <h1>LOG IN</h1>
+               <form action="">
+                   <p>User Name</p>
+                   <input type="text" name="user" placeholder="username">
+                   <p>Password</p>
+                   <input type="password" name="password" placeholder="password">
+                   <button style="width: 200px; float: inline-end;">Log In</button>
+               </form>
+            </div>
+        </div>
+        
+        <button class="editor" style="left: 48%; top: -80px; width: 60px;" onclick="location.href = 'https://docs.google.com/document/d/18fRMUuAra3IfZ3A1YNHK5CVyox7lPkLxhYKSAdGsQrQ/edit?usp=sharing'" >Editor's Page</button>
+       
+    </body>
+</html>

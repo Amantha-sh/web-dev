@@ -1,0 +1,456 @@
+/* main page  */
+*{
+    margin:0%;
+    padding: 0%;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    /* bacground image  */
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(band.jpg);
+    background-size: cover;
+    background-position:center ;
+}
+
+.navbar{
+    position: fixed;
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    top: 0;
+    width: 100%;
+    transition: 00.5s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header.sticky{
+    padding: 20px 100px;
+    background: #361a07;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+/* //change color */
+.navbar ul li a{
+text-decoration: none;
+color: #bf5734;
+}
+
+/* add hover */
+.navbar ul li::after{
+content: "";
+height: 4px;
+width: 0;
+background: #bf7724;
+position: absolute;
+left: 0%;
+bottom: -10px;
+transition: 0.5s;
+}
+
+.navbar ul li:hover:after{
+width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #bf7724;
+}
+
+.content h1{
+    font-size: 60px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+
+}
+
+/* buttons */
+button{
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 2px solid #bf5734;
+    background: transparent;
+    color: #bf5734;
+    cursor:pointer ;
+    position: relative;
+    overflow: hidden;
+}
+
+
+button :hover{
+width: 100%;
+} 
+
+button:hover{
+    border: none;
+}
+
+
+
+/* social media links */
+
+.head{
+    display: grid;
+    place-items: center;
+    background: linear-gradient(#bf7724,#bf5734);
+}
+
+.wrapper{
+    display: inline-flex;
+}
+
+.wrapper .icon{
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor:pointer;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.wrapper .icon span{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    display: block;
+    background: #bf7724;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+}
+
+.wrapper .icon span i{
+    font-size: 40px;
+    line-height: 70px;
+}
+
+.wrapper .icon .tooltip{
+    position: absolute;
+    top: 0px;
+    background: #a0480e;
+    color: rgb(226, 210, 198);
+    font-size: 15px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.wrapper .icon:hover .tooltip{
+    top: 80px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .icon .tooltip::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    /* background: ; */
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45ged );
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0,0,0,00.4
+    );
+}
+
+.wrapper .icon:hover span i{
+    color: white;
+}
+
+
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip
+.wrapper .facebook:hover .tooltip::before{
+    background: #385999;
+}
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip
+.wrapper .twitter:hover .tooltip::before{
+    background: rgb(75, 169, 206);
+}
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover:hover .tooltip
+.wrapper .youtube:hover .tooltip::before{
+    background: red;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover:hover .tooltip
+.wrapper .instagram:hover .tooltip::before{
+    background:linear-gradient(#e95950, #bc2a8d, #fccc63);
+}
+
+.wrapper .github:hover span,
+.wrapper .github:hover:hover .tooltip
+.wrapper .github:hover .tooltip::before{
+    background:black;
+}
+
+
+/* login page  */
+ .login{
+     padding:0 ;
+     margin: 0;
+     font-family: serif;
+     width: 100%;
+     height: 100vh;
+     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(band.jpg);
+     background-size: cover;
+     background-position:center ;
+ }
+
+ .login-form{
+     width: 350px;
+     top: -10%;
+     left: 50%;
+     transform: translate(-50%,50%);
+     position: absolute;
+     color: #bf7724;
+ }
+
+ .login-form h1{
+     font-size: 40px;
+     text-align: center;
+     margin:  30px;
+ }
+ .login-form p{
+     font-size: 20px;
+     margin: 15px 0;
+
+ }
+
+ .login-form input{
+     font-size: 16px;
+     width: 100%;
+     padding: 10px 10px;
+     border-radius: 10px;
+ }
+
+ .login-form button{
+     font-size: 15px;
+     margin: 20px 0;
+     padding: 10px 15px;
+     width: 50px;
+    
+
+ }
+
+ 
+ /* contact us form */
+
+.contact-area{
+
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(band2.jpg);
+    background-size: cover;
+    background-position:center ;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.contact-us{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: bf5734;
+    position: absolute;
+    top: 16%;
+    left: 75%;
+    box-shadow: 4px 4px;
+}
+
+.contact-us .input_field{
+    margin-bottom: 10px;
+}
+.contact-us textarea{
+    height: 200px;
+    resize: none;
+}
+
+.contact-us #error_message{
+    margin-bottom: 20px;
+    padding: 0;
+    width: 220px;
+    background:#a0480e;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+
+
+/* contact us pop up information */
+/* .popup{
+    position:absolute;
+    opacity: 1;
+    visibility: hidden;
+    top: 16%;
+    left: 70%;
+    transform: translate();
+    height: 500px;
+    width: 350px;
+    background-color:#fccc63;
+    border-radius: 5px;
+
+} */
+
+/* .popup{
+        opacity: 1;
+    /* visibility: hidden; */
+/* } */ 
+
+/* .pophed{
+    height: 60px;
+    background: #bf7724;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0 ;
+    color: #fccc63;
+    font-weight: normal;
+    padding-left: 120px;
+    padding-top: 5px;
+}
+
+.popd{
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.line{
+    bottom: 70px;
+    width: 100%;
+    height: 1px;
+    color:bisque;
+}
+
+.sentbtn{
+    position: absolute;
+    bottom: 12px;
+    right: 18%;
+}
+
+.clearbtn{
+position: absolute;
+bottom: 55px;
+right: 18%;
+}
+
+.sentbtn:hover,
+.clearbtn:hover{
+    background: #fccc63;
+    color: #361a07;
+    transition: 0.5s;
+} */
+
+
+/* popup modal  */
+/* .modal{
+    position: absolute;
+    top: 16%;
+    left: 70%;
+    transform: translate(-5%, -5%) scale(0);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    height: 500px;
+    width: 350px;
+    background-color:#fccc63;
+    border-radius: 5px;
+    
+}
+
+.modal-active{
+    transform: translate(-5%, -5%) scale(1);
+}
+
+.modal-heder{
+    height: 60px;
+    background: #bf7724;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0 ;
+    color: #fccc63;
+    font-weight: normal;
+    padding-left: 100px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.modal-body{
+    padding: 10px 15px;
+} */
+
+
+/* popup modal  */
+.modal-container{
+    border-radius: 10px;
+    background-color: #fccc63;
+    position: absolute;
+    padding: 15px;
+    opacity: 0;
+    pointer-events: none;
+    top: 10%;
+    left: 70%;
+    width: 350px;
+    height: 500px;
+    max-width: 100%;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    /* height: 100vw;
+    width: 100vw; */
+
+    /* display: none; */
+}
+
+.modal-container.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
